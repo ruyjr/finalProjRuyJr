@@ -1,24 +1,26 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
 
-app.listen(3000, ()=> console.log('server is running'));
+app.listen(3000, () => console.log("server is running"));
 
 //Set View Engine to EJS
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
 //serving static files
-app.use(express.static('public'))
-
+app.use(express.static("public"));
 
 //route for home /
-app.get('/', (req, res) => {
-    res.render('Home');
-})
+app.get("/", (req, res) => {
+  res.render("Home");
+});
 
 //route for /about
-app.get('/about', (req, res) => {
-    res.render('About');
+app.get("/about", (req, res) => {
+  res.render("About");
+});
 
-
-})
+//route for diary page
+app.get("/diary", (req, res) => {
+    res.render("Diary");
+  });
