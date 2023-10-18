@@ -24,3 +24,14 @@ app.get("/about", (req, res) => {
 app.get("/diary", (req, res) => {
     res.render("Diary");
   });
+
+  //route for adding records
+  app.get('/add', (req, res) => {
+        res.render('Add');
+
+  });
+
+  //route for saving diary
+  app.post('/add-to-diary', (req, res) => {
+      res.send("ADD")
+  })
