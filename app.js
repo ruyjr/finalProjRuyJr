@@ -7,6 +7,9 @@ app.listen(3000, ()=> console.log('server is running'));
 //Set View Engine to EJS
 app.set('view engine', 'ejs');
 
+//serving static files
+app.use(express.static('public'))
+
 
 //route for home /
 app.get('/', (req, res) => {
